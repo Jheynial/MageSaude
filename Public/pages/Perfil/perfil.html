@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil - Rede Social de Saúde</title>
-    <link id="styleSheetLink" rel="stylesheet"  href="https://github.com/Jheynial/MageSaude/blob/main/Public/pages/Perfil/perfil.css" media="screen">
+    <link id="styleSheetLink" rel="stylesheet"  href="https://github.com/Jheynial/MageSaude/Public/pages/Perfil/perfil.css" media="screen">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
@@ -116,7 +116,7 @@
         
 
 if (!usuarioAtual) {
-    window.location.href = '/Public/index.html'; // Redireciona se o usuário não estiver logado
+    window.location.href = 'https://jheynial.github.io/MageSaude/Public/index.html'; // Redireciona se o usuário não estiver logado
 } else {
     document.getElementById('perfilNome').textContent = `${usuarioAtual.nome} ${usuarioAtual.sobrenome}`;
     document.getElementById('perfilEmail').textContent = usuarioAtual.email;
@@ -128,11 +128,11 @@ if (!usuarioAtual) {
         
         document.getElementById('logoutButton').addEventListener('click', () => {
             localStorage.removeItem('usuarioAtual');
-            window.location.href = '/Public/index.html'; // Corrigindo o redirecionamento para o diretório correto
+            window.location.href = 'https://jheynial.github.io/MageSaude/Public/index.html'; // Corrigindo o redirecionamento para o diretório correto
         });
 
         document.getElementById('consultasButton').addEventListener('click', () => {
-            window.location.href = '/Public/pages/consultas/consultas.html'; // Corrigindo o redirecionamento para o diretório correto
+            window.location.href = 'https://jheynial.github.io/MageSaude/Public/pages/consultas/consultas.html'; // Corrigindo o redirecionamento para o diretório correto
         });
 
         // Função para formatar o CPF
@@ -145,7 +145,7 @@ if (!usuarioAtual) {
             return telefone.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
         }
     </script>
-    <script src="https://github.com/Jheynial/MageSaude/blob/main/Public/script.js" defer></script>
+    <script src="https://github.com/Jheynial/MageSaude/Public/script.js" defer></script>
     <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
 </body>
 </html>
