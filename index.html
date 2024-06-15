@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="2; url=https://github.com/Jheynial/MageSaude/blob/main/Public/index.html">
+<meta http-equiv="refresh" content="3; url=Public/index.html">
 <title>Redirecionando...</title>
 <style>
     body {
@@ -12,14 +12,48 @@
         height: 100vh;
         margin: 0;
         background-color: #f0f0f0; /* Cor de fundo opcional */
+        flex-direction: column;
     }
     img {
-        max-width: 100%;
-        max-height: 100%;
-    }
+        max-width: 200%;
+        max-height: 200%;
+        animation: pulse 2s infinite; /* Animação de pulsação */
+}
+@keyframes pulse {
+    0% { transform: scale(0.9); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(0.9); }
+}
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid #0000;
+  border-right-color: #ff000097;
+  position: relative;
+  animation: l24 1s infinite linear;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: inherit;
+  animation: inherit;
+  animation-duration: 2s;
+}
+.loader:after {
+  animation-duration: 4s;
+}
+@keyframes l24 {
+  100% {transform: rotate(1turn)}
+}
 </style>
 </head>
 <body>
 <img src="https://i.ibb.co/y6pm5Fr/hurt.png" alt="Imagem de redirecionamento">
+
+<div class="loader"></div>
 </body>
 </html>

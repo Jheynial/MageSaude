@@ -10,17 +10,17 @@
 <body>
     <div class="menu-center">
     <nav class="menu">
-        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+        <input type="checkbox" ref="#" class="menu-open" name="menu-open" id="menu-open"/>
         <label class="menu-open-button" for="menu-open">
           <span class="hamburger hamburger-1"></span>
           <span class="hamburger hamburger-2"></span>
           <span class="hamburger hamburger-3"></span>
         </label>
         
-        <a href="https://web.facebook.com/prefeituramage/?locale=pt_BR&_rdc=1&_rdr" target=”_blank” class="menu-item"> <i class="fab fa-facebook tooltip"  title="facebook"></i> </a>
-        <a href="https://www.instagram.com/prefeitura_mage/" target=”_blank” class="menu-item"> <i class="fab fa-instagram" title="instagram"></i> </a>
-        <a href="https://webmail.mage.rj.gov.br/" target=”_blank” class="menu-item"> <i class="far fa-envelope" title="webmail"></i> </a>
-        <a href="https://www.linkedin.com/company/prefeiturademage?originalSubdomain=br" target=”_blank” class="menu-item"><i class="fab fa-linkedin"  title="linkedin"></i> </a>
+        <a href="https://web.facebook.com/prefeituramage/?locale=pt_BR&_rdc=1&_rdr" target=”_blank” class="menu-item" title="facebook"> <i class="fab fa-facebook "></i> </a>
+        <a href="https://www.instagram.com/prefeitura_mage/" target=”_blank” class="menu-item"  title="instagram"> <i class="fab fa-instagram"></i> </a>
+        <a href="https://webmail.mage.rj.gov.br/" target=”_blank” class="menu-item"  title="webmail"> <i class="far fa-envelope"></i> </a>
+        <a href="https://www.linkedin.com/company/prefeiturademage?originalSubdomain=br" target=”_blank” class="menu-item"  title="linkedin"><i class="fab fa-linkedin"></i> </a>
 
         
       </nav>
@@ -69,20 +69,63 @@
         </label>
     </div>
     <script>
-        const perfilContainer = document.getElementById('perfilContainer');
-        const usuarioAtual = JSON.parse(localStorage.getItem('usuarioAtual'));
-        const consultasButton = document.getElementById('consultasButton');
+        // Função para mostrar pop-up de feedback
+        function showPopup(message, popupElement) {
+            const popup = document.getElementById(popupElement);
+            const popupMessage = popup.querySelector('.popup-message');
+            popupMessage.textContent = message;
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 3000);
+        }
 
+        // Função para formatar o CPF
+        function formatarCPF(cpf) {
+            return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+        }
+
+        // Função para formatar o número de telefone
+        function formatarTelefone(telefone) {
+            return telefone.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+        }
+
+        // Verifica se há usuário atual logado
+        const usuarioAtual = JSON.parse(localStorage.getItem('usuarioAtual'));
         if (!usuarioAtual) {
-            window.location.href = '/Public/index.html'; // Corrigindo o redirecionamento para o diretório correto
+            window.location.href = '/Public/index.html'; // Redireciona se o usuário não estiver logado
         } else {
             document.getElementById('perfilNome').textContent = `${usuarioAtual.nome} ${usuarioAtual.sobrenome}`;
             document.getElementById('perfilEmail').textContent = usuarioAtual.email;
-            document.getElementById('perfilCpf').textContent = formatarCPF(usuarioAtual.cpf); // Formatação do CPF
-            document.getElementById('perfilTelefone').textContent = formatarTelefone(usuarioAtual.telefone); // Formatação do telefone
+            document.getElementById('perfilCpf').textContent = formatarCPF(usuarioAtual.cpf);
+            document.getElementById('perfilTelefone').textContent = formatarTelefone(usuarioAtual.telefone);
             document.getElementById('perfilSus').textContent = usuarioAtual.sus;
         }
 
+        // Botão de logout
+        document.getElementById('logoutButton').addEventListener('click', () => {
+            localStorage.removeItem('usuarioAtual');
+            window.location.href = '/Public/index.html';
+        });
+
+        // Botão para consultar e marcar consultas
+        document.getElementById('consultasButton').addEventListener('click', () => {
+            window.location.href = '/Public/pages/consultas/consultas.html';
+        });
+
+        
+
+if (!usuarioAtual) {
+    window.location.href = '/Public/index.html'; // Redireciona se o usuário não estiver logado
+} else {
+    document.getElementById('perfilNome').textContent = `${usuarioAtual.nome} ${usuarioAtual.sobrenome}`;
+    document.getElementById('perfilEmail').textContent = usuarioAtual.email;
+    document.getElementById('perfilCpf').textContent = formatarCPF(usuarioAtual.cpf); // Formatação do CPF
+    document.getElementById('perfilTelefone').textContent = formatarTelefone(usuarioAtual.telefone); // Formatação do telefone
+    document.getElementById('perfilSus').textContent = usuarioAtual.sus;
+}
+
+        
         document.getElementById('logoutButton').addEventListener('click', () => {
             localStorage.removeItem('usuarioAtual');
             window.location.href = '/Public/index.html'; // Corrigindo o redirecionamento para o diretório correto

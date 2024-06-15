@@ -229,8 +229,7 @@ a {
 	margin-left: -40px;
 	position: absolute;
 	top: 20px;
-	color: var(--color-2);
-	text-align: center;
+    text-align: center;
 	line-height: 50px;
 	transform: translate3d(0, 0, 0);
 	transition: transform ease-out 200ms;

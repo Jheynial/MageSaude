@@ -1,4 +1,3 @@
-
 const toggleButton = document.getElementById('toggleButton');
 const loginForm = document.getElementById('loginForm');
 const cadastroForm = document.getElementById('cadastroForm');
@@ -32,7 +31,41 @@ cadastroForm.addEventListener('submit', cadastrarUsuario);
 
 function cadastrarUsuario(e) {
     e.preventDefault();
-    // Lógica para cadastrar novo usuário
+    const novoUsuario = {
+        nome: cadastroForm.nome.value,
+        sobrenome: cadastroForm.sobrenome.value,
+        email: cadastroForm.emailCadastro.value,
+        senha: cadastroForm.senhaCadastro.value,
+        cpf: cadastroForm.cpf.value,
+        telefone: cadastroForm.telefone.value,
+        sus: cadastroForm.sus.value
+    };
+
+    // Verifica se o email já está cadastrado
+    const usuarioExistente = usuarios.find(u => u.email === novoUsuario.email);
+    if (usuarioExistente) {
+        showPopup_senha('Este email já está cadastrado!');
+        return;
+    }
+
+    // Adiciona o novo usuário ao array de usuários
+    usuarios.push(novoUsuario);
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+    // Armazena as informações adicionais no localStorage
+    localStorage.setItem('dadosUsuario', JSON.stringify({
+        nome: novoUsuario.nome,
+        sobrenome: novoUsuario.sobrenome,
+        cpf: novoUsuario.cpf,
+        telefone: novoUsuario.telefone,
+        sus: novoUsuario.sus
+    }));
+
+    // Mostra mensagem de sucesso
+    showPopup('Usuário cadastrado com sucesso!');
+
+    // Opcional: Redireciona para a página de perfil ou outra página desejada
+    // window.location.href = 'pages/perfil/perfil.html';
 }
 
 function showPopup(message) {
