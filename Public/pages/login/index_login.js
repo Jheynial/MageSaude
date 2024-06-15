@@ -65,7 +65,7 @@ function cadastrarUsuario(e) {
     showPopup('Usuário cadastrado com sucesso!');
 
     // Opcional: Redireciona para a página de perfil ou outra página desejada
-    window.location.href = 'https://jheynial.github.io/MageSaude/Public/pages/perfil/perfil.html';
+    window.location.href = '/MageSaude/Public/pages/perfil/perfil.html';
 }
 
 function showPopup(message) {
