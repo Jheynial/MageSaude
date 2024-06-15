@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas - Rede Social de Saúde</title>
+    <link id="styleSheetLink" rel="stylesheet"  href="consultas.css" media="screen">
+    
+</head>
+<body>
+    
+    <div class="container" id="marcarConsultaContainer">
+        <h1>Marcar Consulta</h1>
+        <h3 id="consultaHeader"></h3>
+        <form id="marcarConsultaForm">
+            <div class="input-group">
+                <label for="usuario">Usuário:</label>
+                <select class="zeraseta" id="usuario" name="usuario" disabled>
+                    <option id="usuarioOption"></option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="especialidade">Especialidade:</label>
+                <select id="especialidade" name="especialidade" required>
+                    <option value="">Selecione</option>
+                    <option value="Oftalmologia">Oftalmologia</option>
+<option value="Ortopedia">Ortopedia</option>
+<option value="Endocrinologia">Endocrinologia</option>
+<option value="Neurologia">Neurologia</option>
+<option value="Otorrinolaringologia">Otorrinolaringologia</option>
+<option value="Urologia">Urologia</option>
+<option value="Psiquiatria">Psiquiatria</option>
+<option value="Nutrição">Nutrição</option>
+<option value="Fisioterapia">Fisioterapia</option>
+<option value="Odontologia">Odontologia</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="postoMedico">Posto Médico:</label>
+                <select id="postoMedico" name="postoMedico" required>
+                    <option value="">Selecione</option>
+                    
+    <option value="USF BNH De Mage">USF BNH De Mage</option>
+    <option value="USF Britador">USF Britador</option>
+    <option value="USF Cachoeira Grande">USF Cachoeira Grande</option>
+    <option value="USF Cachoeirinha">USF Cachoeirinha</option>
+    <option value="USF Canal">USF Canal</option>
+    <option value="USF Cantinho Da Vovo">USF Cantinho Da Vovo</option>
+    <option value="USF Barbuda">USF Barbuda</option>
+    <option value="USF Capela">USF Capela</option>
+    <option value="USF Conceicao">USF Conceicao</option>
+    <option value="USF Flexeira">USF Flexeira</option>
+    <option value="USF Lagoa">USF Lagoa</option>
+    <option value="USF Rua Da Guia">USF Rua Da Guia</option>
+    <option value="USF De Andorinhas">USF Andorinhas</option>
+    <option value="USF De Citrolandia">USF Citrolandia</option>
+    <option value="USF De Jardim Nazareno">USF Jardim Nazareno</option>
+    <option value="USF Maurimarcia">USF Maurimarcia</option>
+    <option value="USF Parque Dos Artistas">USF Parque Dos Artistas</option>
+    <option value="USF Pau Grande">USF Pau Grande</option>
+    <option value="USF Piedade">USF Piedade</option>
+    <option value="USF Poco Escuro">USF Poco Escuro</option>
+    <option value="USF Rio Do Ouro">USF Rio Do Ouro</option>
+    <option value="USF Sao Francisco">USF Sao Francisco</option>
+    <option value="USF Vila Serrana II">USF Vila Serrana II</option>
+    <option value="USF Ypiranga">USF Ypiranga</option>
+    <option value="USF Anil">USF Anil</option>
+    <option value="USF Buraco Da Onca">USF Buraco Da Onca</option>
+    <option value="USF Campinho">USF Campinho</option>
+    <option value="USF Novo Horizonte">USF Novo Horizonte</option>
+    <option value="USF Parque Cacula">USF Parque Cacula</option>
+    <option value="USF Parque Estrela">USF Parque Estrela</option>
+    <option value="USF Partido">USF Partido</option>
+    <option value="USF Guarani II">USF Guarani II</option>
+    <option value="USF Guarani III">USF Guarani III</option>
+    <option value="USF Jardim Bela Floresta">USF Jardim Bela Floresta</option>
+    <option value="USF Jardim Da Paz">USF Jardim Da Paz</option>
+    <option value="USF Leque Azul">USF Leque Azul</option>
+    <option value="USF Parque Iriri">USF Parque Iriri</option>
+    <option value="USF Parque Maita">USF Parque Maita</option>
+    <option value="USF Parque Santana">USF Parque Santana</option>
+    <option value="USF Ponte Preta">USF Ponte Preta</option>
+    <option value="USF Raiz Da Serra">USF Raiz Da Serra</option>
+    <option value="USF Santa Dalila">USF Santa Dalila</option>
+    <option value="USF Sao Francisco Do Goia">USF Sao Francisco Do Goia</option>
+    <option value="USF Sao Sebastiao">USF Sao Sebastiao</option>
+    <option value="USF Sayonara">USF Sayonara</option>
+    <option value="USF Vila Carvalho">USF Vila Carvalho</option>
+    <option value="USF Vila Esperanca">USF Vila Esperanca</option>
+    <option value="USF Vila Nova">USF Vila Nova</option>
+    <option value="USF Vila Recreio">USF Vila Recreio</option>
+    <option value="USF Vila Serrana I">USF Vila Serrana I</option>
+    <option value="USF Villar Santo Aleixo">USF Villar Santo Aleixo</option>
+    <option value="UBS Guarani">UBS Guarani</option>
+    <option value="UBS Nova Marilia">UBS Nova Marilia</option>
+                </select>
+            </div>
+            <div class="input-group input-inline">
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+            </div>
+            <div class="button-group">
+                <button type="button" class="button1" id="voltarPerfilButton">Voltar</button>
+                <button type="submit" class="button">Marcar consulta</button>
+                <button type="button" class="button" id="verConsultasButton">Ver Consultas</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container hidden" id="verConsultasContainer">
+        <h1>Consultas Agendadas</h1>
+        <ul id="consultasList"></ul>
+        <div class="button-group">
+            <button class="button" id="voltarButton">Voltar</button>
+        </div>
+    </div>
+<!-- botão white -->
+<div>
+    <input type="checkbox" class="checkbox" id="toggleStyleSheetCheckbox"/>
+    <label class="label" for="toggleStyleSheetCheckbox">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <div class="ball"></div>
+    </label>
+    <script>
+ const marcarConsultaContainer = document.getElementById('marcarConsultaContainer');
+const verConsultasContainer = document.getElementById('verConsultasContainer');
+const marcarConsultaForm = document.getElementById('marcarConsultaForm');
+const verConsultasButton = document.getElementById('verConsultasButton');
+const voltarPerfilButton = document.getElementById('voltarPerfilButton');
+const voltarButton = document.getElementById('voltarButton');
+const consultasList = document.getElementById('consultasList');
+const consultas = JSON.parse(localStorage.getItem('consultas')) || [];
+const usuarioAtual = JSON.parse(localStorage.getItem('usuarioAtual'));
+const usuarioOption = document.getElementById('usuarioOption');
+
+if (!usuarioAtual) {
+    window.location.href = 'Public/index.html';
+} else {
+    document.getElementById('consultaHeader').textContent = `Olá, ${usuarioAtual.nome} ${usuarioAtual.sobrenome}`;
+    usuarioOption.textContent = `${usuarioAtual.nome} ${usuarioAtual.sobrenome}`;
+}
+
+function renderConsultas() {
+    consultasList.innerHTML = '';
+    const consultasUsuario = consultas.filter(c => c.email === usuarioAtual.email);
+    consultasUsuario.forEach(consulta => {
+        const li = document.createElement('li');
+        li.textContent = `${consulta.especialidade} - ${consulta.postoMedico} - ${consulta.data} às ${consulta.hora}`;
+        consultasList.appendChild(li);
+    });
+}
+
+marcarConsultaForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const especialidade = marcarConsultaForm.especialidade.value;
+    const postoMedico = marcarConsultaForm.postoMedico.value;
+    const data = marcarConsultaForm.data.value;
+    const hora = marcarConsultaForm.hora.value;
+    const consulta = { email: usuarioAtual.email, especialidade, postoMedico, data, hora };
+    consultas.push(consulta);
+    localStorage.setItem('consultas', JSON.stringify(consultas));
+    marcarConsultaForm.reset();
+});
+
+verConsultasButton.addEventListener('click', () => {
+    marcarConsultaContainer.classList.add('hidden');
+    verConsultasContainer.classList.remove('hidden');
+    renderConsultas();
+});
+
+voltarButton.addEventListener('click', () => {
+    verConsultasContainer.classList.add('hidden');
+    marcarConsultaContainer.classList.remove('hidden');
+});
+
+voltarPerfilButton.addEventListener('click', () => {
+    window.location.href = '../../pages/perfil/perfil.html';
+});
+
+
+    </script>
+     <script src="/Public/script.js" defer></script>
+     <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

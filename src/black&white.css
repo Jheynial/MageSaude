@@ -1,0 +1,32 @@
+
+:root {
+  /*Dark color*/
+    --color-1: #f39c12;
+    --color-2: #ffffff;
+    --color-3: rgb(255 255 255 / 25%);
+    --color-4: #cccccc;
+    --color-5: #1e1e1e;
+    --color-6: #333;
+    --color-7: 0 0 10px rgba(255, 255, 255, 0.1);
+    --color-8: 0 0 10px #4caf50;
+    --color-9: #4caf50;
+    --color-10: hsla(123, 40%, 45%, 0.644);
+    --color-11: hsla(0, 98%, 49%, 0.644);
+    --color-11-clear:#e21616;
+
+    /*White Color*/
+    --color-12: #f39c12;
+    --color-13: #000000;
+    --color-14: rgb(255 255 255 / 25%);
+    --color-15: #cccccc;
+    --color-16: #ffffff;
+    --color-17: #333;
+    --color-18: 0 0 10px rgba(255, 255, 255, 0.1);
+    --color-19: 0 0 10px #4caf50;
+    --color-20: #4caf50;
+    --color-21: hsla(123, 40%, 45%, 0.644);
+    --color-22: rgb(223, 0, 0);
+    --color-22-clear: #e21616;
+
+  }
+
