@@ -21,7 +21,7 @@ function loginUser(e) {
     const usuario = usuarios.find(u => u.email === email && u.senha === senha);
     if (usuario) {
         localStorage.setItem('usuarioAtual', JSON.stringify(usuario));
-        window.location.href = 'pages/perfil/perfil.html'; // Redireciona para a página de perfil
+        window.location.href = 'https://github.com/Jheynial/MageSaude/blob/main/Public/pages/Perfil/perfil.html'; // Redireciona para a página de perfil
     } else {
         showPopup_senha('Email ou senha incorretos!');
     }
