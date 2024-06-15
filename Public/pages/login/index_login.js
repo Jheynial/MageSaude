@@ -21,7 +21,7 @@ function loginUser(e) {
     const usuario = usuarios.find(u => u.email === email && u.senha === senha);
     if (usuario) {
         localStorage.setItem('usuarioAtual', JSON.stringify(usuario));
-        window.location.href = 'https://github.com/Jheynial/MageSaude/Public/pages/Perfil/perfil.html'; // Redireciona para a página de perfil
+        window.location.href = 'jheynial.github.io/MageSaude/Public/pages/Perfil/perfil.html'; // Redireciona para a página de perfil
     } else {
         showPopup_senha('Email ou senha incorretos!');
     }
@@ -65,7 +65,7 @@ function cadastrarUsuario(e) {
     showPopup('Usuário cadastrado com sucesso!');
 
     // Opcional: Redireciona para a página de perfil ou outra página desejada
-    // window.location.href = 'pages/perfil/perfil.html';
+    window.location.href = 'jheynial.github.io/MageSaude/Public/pages/perfil/perfil.html';
 }
 
 function showPopup(message) {
