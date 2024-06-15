@@ -137,7 +137,7 @@ const usuarioAtual = JSON.parse(localStorage.getItem('usuarioAtual'));
 const usuarioOption = document.getElementById('usuarioOption');
 
 if (!usuarioAtual) {
-    window.location.href = 'https://github.com/Jheynial/MageSaude/blob/main/Public/index.html';
+    window.location.href = 'https://github.com/Jheynial/MageSaude/Public/index.html';
 } else {
     document.getElementById('consultaHeader').textContent = `Olá, ${usuarioAtual.nome} ${usuarioAtual.sobrenome}`;
     usuarioOption.textContent = `${usuarioAtual.nome} ${usuarioAtual.sobrenome}`;
