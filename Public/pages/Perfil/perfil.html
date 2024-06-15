@@ -93,7 +93,7 @@
         // Verifica se há usuário atual logado
         const usuarioAtual = JSON.parse(localStorage.getItem('usuarioAtual'));
         if (!usuarioAtual) {
-            window.location.href = 'https://github.com/Jheynial/MageSaude/blob/main/Public/index.html'; // Redireciona se o usuário não estiver logado
+            window.location.href = 'https://github.com/Jheynial/MageSaude/Public/index.html'; // Redireciona se o usuário não estiver logado
         } else {
             document.getElementById('perfilNome').textContent = `${usuarioAtual.nome} ${usuarioAtual.sobrenome}`;
             document.getElementById('perfilEmail').textContent = usuarioAtual.email;
