@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultas - Rede Social de Saúde</title>
-    <link id="styleSheetLink" rel="stylesheet"  href="https://github.com/Jheynial/MageSaude/Public/pages/consultas/consultas.css" media="screen">
+    <link id="styleSheetLink" rel="stylesheet"  href="https://jheynial.github.io/MageSaude/Public/pages/consultas/consultas.css" media="screen">
     
 </head>
 <body>
@@ -137,7 +137,7 @@ const usuarioAtual = JSON.parse(localStorage.getItem('usuarioAtual'));
 const usuarioOption = document.getElementById('usuarioOption');
 
 if (!usuarioAtual) {
-    window.location.href = 'https://github.com/Jheynial/MageSaude/Public/index.html';
+    window.location.href = 'https://jheynial.github.io/MageSaude/Public/index.html';
 } else {
     document.getElementById('consultaHeader').textContent = `Olá, ${usuarioAtual.nome} ${usuarioAtual.sobrenome}`;
     usuarioOption.textContent = `${usuarioAtual.nome} ${usuarioAtual.sobrenome}`;
@@ -177,7 +177,7 @@ voltarButton.addEventListener('click', () => {
 });
 
 voltarPerfilButton.addEventListener('click', () => {
-    window.location.href = 'https://github.com/Jheynial/MageSaude/Public/pages/Perfil/perfil.html';
+    window.location.href = 'https://jheynial.github.io/MageSaude/Public/pages/Perfil/perfil.html';
 });
 
 
